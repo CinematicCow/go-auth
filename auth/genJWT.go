@@ -12,7 +12,7 @@ func GenAuth(email string) string {
 
 	claims := jwt.StandardClaims{
 		IssuedAt:  jwt.Now(),
-		ExpiresAt: jwt.At(time.Now().Add(time.Second * 10)),
+		ExpiresAt: jwt.At(time.Now().Add(time.Minute * 1)),
 		Subject:   email,
 	}
 
